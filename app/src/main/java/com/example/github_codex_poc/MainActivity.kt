@@ -20,10 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             GitHubCodeXpocTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    HelloWorldMessage(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
@@ -31,17 +28,17 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun HelloWorldMessage(modifier: Modifier = Modifier) {
     Text(
-        text = "Hello $name!",
+        text = "Hello world!",
         modifier = modifier
     )
 }
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun HelloWorldMessagePreview() {
     GitHubCodeXpocTheme {
-        Greeting("Android")
+        HelloWorldMessage()
     }
 }
